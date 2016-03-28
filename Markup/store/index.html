@@ -79,35 +79,20 @@
     <nav id="appm-navbar-nav" class="navbar navbar-default" data-spy="affix" data-offset-top="50" data-offset-bottom="40">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-menu-toggle" data-toggle="dropdown">
+                <!--<a class="navbar-menu-toggle" data-toggle="dropdown">
                     <span class="icon fw-stack">
                         <i class="fw fw-tiles fw-stack-1x"></i>
                     </span>
-                </a>
+                </a>-->
                 <ol class="breadcrumb navbar-brand appm-breadcrumb">
                     <li><a href="index.html"><i class="icon fw fw-home"></i></a></li>
                     <li><a href="#">My Favorites</a></li>
                     <li class="active"><a href="#">Web Applications</a></li>
                 </ol>
                 <ul class="dropdown-menu tiles arrow dark add-margin-1x" role="menu">
-                    <li>
-                        <a href="#">
-                            <i class="icon fw fw-heart"></i>
-                            <span class="name">My Favorites</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon fw fw-application"></i>
-                            <span class="name">My Apps</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="icon fw fw-store"></i>
-                            <span class="name">Store</span>
-                        </a>
-                    </li>
+                    <li><a href="#"><i class="icon fw fw-heart"></i><span class="name">My Favorites</span></a></li>
+                    <li><a href="#"><i class="icon fw fw-application"></i><span class="name">My Apps</span></a></li>
+                    <li><a href="#"><i class="icon fw fw-store"></i><span class="name">Store</span></a></li>
                 </ul>
             </div>
         </div>
@@ -123,9 +108,27 @@
         <div class="media-left">
 
             <nav class="navigation">
+                <ul>
+                    <li class="purple">
+                        <a><i class="fw fw-web-app icon"></i><span class="left-menu-item hidden-xs hidden-sm">Web Applications</span></a>
+                        <ul class="sublevel-menu">
+                            <li><a href="#"><span class="name">Sub menu</span></a></li>
+                            <li><a href="#"><span class="name">Sub menu</span></a></li>
+                        </ul>
+                    </li>
+                    <li class="yellow"><a><i class="fw fw-mobile icon"></i><span class="left-menu-item hidden-xs hidden-sm">Mobile Applications</span></a></li>
+                    <li class="orange"><a><i class="fw fw-globe icon"></i><span class="left-menu-item hidden-xs hidden-sm">Web Applications</span></a></li>
+                </ul>
+            </nav>
+
+            <!--<nav class="navigation">
                 <a href="#" class="active purple">
-                    <span class="icon"><i class="fw fw-web-app"></i></span>
+                    <span class="icon"></span>
                     <span class="left-menu-item hidden-xs hidden-sm">Web Applications</span>
+                    <ul>
+                        <li><a href="#"><span class="name">Sub menu</span></li>
+                        <li><a href="#"><span class="name">Sub menu</span></li>
+                    </ul>
                 </a>
                 <a href="#" class="yellow">
                     <span class="icon"><i class="fw fw-mobile   "></i></span> <span
@@ -135,7 +138,7 @@
                     <span class="icon"><i class="fw fw-globe"></i></span>
                     <span class="left-menu-item hidden-xs hidden-sm">Sites</span>
                 </a>
-            </nav>
+            </nav>-->
 
             <div class="tags-wrapper hidden-xs hidden-sm">
                     <div class="tag-title"> Tags</div>

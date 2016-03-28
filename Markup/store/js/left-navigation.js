@@ -3,7 +3,7 @@ $(window).load(function(){
     var animating = false;
     var menu = 'navigation';
 
-    $(".navigation a").click(function(e){
+    $(".navigation ul li").click(function(e){
         e.preventDefault();
 
         if(animating){
@@ -12,7 +12,7 @@ $(window).load(function(){
 
         var el = $(this),
             color = $(this).find('.left-menu-item').css('background-color'),
-            prev = $(".navigation > a:first"),
+            prev = $(".navigation ul li:first"),
             distance = el.offset().top  - $(".navigation").offset().top,
             isLastElClicked = el.next().length > 0 ? false : true;
 

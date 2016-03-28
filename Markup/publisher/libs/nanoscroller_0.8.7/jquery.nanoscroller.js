@@ -3,7 +3,7 @@
 * Copyright (c) 2015 James Florentino; Licensed MIT */
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
-    return define(['jquery'], function($) {
+    return define(['jquery.nanoscroller'], function($) {
       return factory($, window, document);
     });
   } else if (typeof exports === 'object') {

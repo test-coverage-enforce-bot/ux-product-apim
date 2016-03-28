@@ -788,6 +788,7 @@ ul.product-tags {
 }
 
 button.btn.btn-default.dropdown-toggle {
+    border: 1px solid #215080;
     border-right: 1px solid #EFEFEF;
 }
 button.btn.btn-default.dropdown-toggle:hover {
@@ -874,4 +875,11 @@ div.image-container {
     width: auto;
     height: 100%;
     overflow: hidden;
+}
+
+.form-api-subscription{
+    margin:10px 0px;
+}
+.form-api-subscription .form-group{
+    padding-right:20px;
 }

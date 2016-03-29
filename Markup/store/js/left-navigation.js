@@ -20,9 +20,7 @@ $(window).load(function(){
             isActiveItem = el.hasClass('active');
 
         if($('.sublevel-menu').is(':visible')){
-            $('.sublevel-menu').slideUp(function(){
-                console.log(el.offset().top  - $(".navigation").offset().top);
-            });
+            $('.sublevel-menu').slideUp();
             delay = 700;
         }
 
@@ -40,11 +38,13 @@ $(window).load(function(){
             $(el).find('.left-menu-item').css('background-color',color);
             $.when(
                 el.delay(delay).animate({
-                    top: -distance
+                    top: -distance + 'px'
                 },{
                     duration:700,
-                    start:function(){
-                        console.log('Started');
+                    step:function(now,fx){
+                        if(now == 0){
+                            fx.end = -($(fx.elem).offset().top  - $(".navigation").offset().top);
+                        }
                     }
                 })
             ).done(function () {

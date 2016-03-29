@@ -107,20 +107,27 @@ ul.sublevel-menu {
     padding: 0px;
     list-style: none;
     margin: 0px;
+    display: block;
+    background-color: rgb(108, 108, 108);
 }
 
 ul.sublevel-menu li{
     line-height: 40px;
-    padding: 0px 0px 0px 50px;
     cursor:pointer;
 }
 
-ul.sublevel-menu li:hover {
+ul.sublevel-menu li:hover, ul.sublevel-menu li:hover > .icon {
     background-color: #626262;
 }
 
 ul.sublevel-menu li a{
     font-size: 14px;
+}
+
+ul.sublevel-menu .icon {
+    background-color: #6C6C6C !important;
+    font-size: 17px;
+    padding: 11px;
 }
 
 nav a.active .sublevel-menu {

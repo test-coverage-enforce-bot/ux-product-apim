@@ -118,7 +118,7 @@ ul.sublevel-menu li{
 ul.sublevel-menu li a{
     display:block;
     font-size: 14px;
-    text-indent:20px;
+    text-indent:10px;
 }
 ul.sublevel-menu li a:hover{
     background-color: #626262;
@@ -910,10 +910,21 @@ div.image-container {
 }
 
 .form-api-subscription{
-    margin:10px 0px;
+    border:1px solid #ddd;
+    background:#FBFBFB;
 }
 .form-api-subscription .form-group{
     padding-right:20px;
+}
+
+.api-details-container p.no-margin{
+    margin:0px;
+}
+.api-details-container p.margin-top-10{
+    margin-top:10px;
+}
+.api-details-container p strong.padding-right-10{
+    padding-right:10px;
 }
 
 

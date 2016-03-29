@@ -42,9 +42,9 @@ ol.breadcrumb.navbar-brand {
 }
 .media-body{ background-color: #EFEFEF;}
 
-span.icon{
-    height: 40px;
-    width: 40px;
+
+.form-api-subscription .btn .icon{
+    margin-right:5px;
 }
 
 nav.navigation > ul{

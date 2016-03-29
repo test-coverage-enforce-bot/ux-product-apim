@@ -113,19 +113,24 @@ ul.sublevel-menu {
 
 ul.sublevel-menu li{
     line-height: 40px;
-    cursor:pointer;
-}
-
-ul.sublevel-menu li:hover, ul.sublevel-menu li:hover > .icon {
-    background-color: #626262;
 }
 
 ul.sublevel-menu li a{
+    display:block;
     font-size: 14px;
+    text-indent:20px;
 }
-
+ul.sublevel-menu li a:hover{
+    background-color: #626262;
+}
+nav.navigation ul > li .sublevel-menu li .icon{
+    background-color: rgb(108, 108, 108);
+}
+nav.navigation ul > li ul.sublevel-menu li a:hover .icon{
+    background-color: #626262;
+}
 ul.sublevel-menu .icon {
-    background-color: #6C6C6C !important;
+    background-color: none;
     font-size: 17px;
     padding: 11px;
 }
@@ -909,4 +914,11 @@ div.image-container {
 }
 .form-api-subscription .form-group{
     padding-right:20px;
+}
+
+
+@media (min-width: 320px) and (max-width: 991px) {
+    ul.sublevel-menu li a {
+        text-indent:0px;
+    }
 }

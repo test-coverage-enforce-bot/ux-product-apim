@@ -674,6 +674,15 @@ ul.product-tags {
     margin-top: -10px;
 }
 
+#left-sidebar{
+    background-color: inherit;
+    color: inherit;
+}
+
+#left-sidebar.sidebar-nav li a{
+    color:inherit;
+}
+
 .page-content-wrapper.fixed .sidebar-wrapper.sidebar-options {
     width: 235px;
     max-height: calc(100% - 85px);

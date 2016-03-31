@@ -776,6 +776,14 @@ ul.product-tags {
     margin-bottom: 10px;
 }
 
+@media (min-width: 768px){
+    .visible-side-pane{
+        position: relative;
+        left: 0px;
+        width: initial;
+    }
+}
+
 button.btn.btn-default.dropdown-toggle {
     border: 1px solid #215080;
     border-right: 1px solid #EFEFEF;

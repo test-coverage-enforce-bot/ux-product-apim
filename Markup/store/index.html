@@ -80,19 +80,19 @@
     <!-- media-->
     <div class="media">
         <!-- media left-->
-        <div class="media-left">
+        <div class="media-left sidebar-wrapper sidebar-nav visible-side-pane" id="left-sidebar" data-side="left" data-width="200">
             <nav class="navigation">
                 <ul>
                     <li class="purple active">
-                        <a><i class="fw fw-api icon"></i><span class="left-menu-item hidden-xs hidden-sm">APIs</span></a>
+                        <a><i class="fw fw-api icon"></i><span class="left-menu-item">APIs</span></a>
                         <ul class="sublevel-menu">
-                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name hidden-xs hidden-sm">Sub menu</span></a></li>
-                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name hidden-xs hidden-sm">Sub menu</span></a></li>
+                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name">Sub menu</span></a></li>
+                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name">Sub menu</span></a></li>
                         </ul>
                     </li>
-                    <li class="green"><a><i class="fw fw-web-app icon"></i><span class="left-menu-item hidden-xs hidden-sm">Applications</span></a></li>
-                    <li class="yellow"><a><i class="fw fw-subscribe icon"></i><span class="left-menu-item hidden-xs hidden-sm">Subscriptions</span></a></li>
-                    <li class="orange"><a><i class="fw fw-forum icon"></i><span class="left-menu-item hidden-xs hidden-sm">Forum</span></a></li>
+                    <li class="green"><a><i class="fw fw-web-app icon"></i><span class="left-menu-item">Applications</span></a></li>
+                    <li class="yellow"><a><i class="fw fw-subscribe icon"></i><span class="left-menu-item">Subscriptions</span></a></li>
+                    <li class="orange"><a><i class="fw fw-forum icon"></i><span class="left-menu-item">Forum</span></a></li>
                 </ul>
             </nav>
             <div class="tags-wrapper hidden-xs hidden-sm">
@@ -122,9 +122,14 @@
             <!-- navbar -->
             <div class="navbar-wrapper navbar-search">
                 <nav class="navbar navbar-default" data-spy="affix" data-offset-top="80" data-offset-bottom="40">
+                    <a class="navbar-menu-toggle hidden-sm hidden-lg hidden-md" data-toggle="sidebar" data-target="#left-sidebar" data-container=".page-content-wrapper" data-container-divide="true" aria-expanded="false" rel="leftmenu-sidebar">
+                        <span class="icon fw-stack">
+                            <i class="fw fw-menu fw-stack-1x toggle-icon-left-arrow"></i>
+                        </span>
+                    </a>
                     <!-- Search-->
                     <div class="form-group">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="col-xs-11 col-sm-12 col-md-12 col-lg-4">
                             <div class="input-group input-wrap search-wrap">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <div class="input-group-btn">

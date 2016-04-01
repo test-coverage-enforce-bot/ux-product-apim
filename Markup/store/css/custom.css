@@ -589,10 +589,10 @@ ul.product-tags {
 }
 
 
-.image-container {
+.thumbnail.icon {
     position: relative;
 }
-.image-container .after {
+.thumbnail.icon .after {
     position: absolute;
     top: 0;
     left: 0;
@@ -601,13 +601,12 @@ ul.product-tags {
     display: none;
     color: #FFF;
 }
-.image-container:hover .after {
+.thumbnail.icon:hover .after {
     display: block;
     background: rgba(0, 0, 0, .6);
     cursor: pointer;
 }
-.image-container>.after>a>span.fw-stack.fw-lg {
-    /* background: red; */
+.thumbnail.icon>.after>a>span.fw-stack.fw-lg {
     position: absolute;
     top: 0;
     left: 0;
@@ -904,6 +903,21 @@ div.image-container {
 .navbar-search,.navbar-search .navbar{
     min-height:40px;
 }
+.navbar-search .navbar .navbar-menu-toggle .icon{
+    line-height:40px;
+}
+
+.thumbnail.icon .square-element img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 
 @media (min-width: 320px) and (max-width: 991px) {
     ul.sublevel-menu li a {

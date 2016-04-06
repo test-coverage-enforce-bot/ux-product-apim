@@ -65,32 +65,23 @@
         </ul>
     </div>
 </header>
-<!-- breadcrumb -->
-<div class="breadcrumb-wrapper">
-    <ol class="breadcrumb appm-breadcrumb">
-        <li><a href="index.html"><i class="icon fw fw-home"></i></a></li>
-        <li><a href="#">APIs</a></li>
-        <li class="active"><a href="#">CalculatorAPI - 1.0</a></li>
-    </ol>
-</div>
 <!-- #page-content-wrapper -->
 <div class="page-content-wrapper">
     <!-- media-->
     <div class="media">
         <!-- media left-->
-        <div class="media-left">
+        <div class="media-left sidebar-wrapper sidebar-nav visible-side-pane" id="left-sidebar" data-spy="affix" data-offset-top="80" data-side="left" data-width="200">
             <nav class="navigation">
                 <ul>
                     <li class="purple active">
-                        <a><i class="fw fw-api icon"></i><span class="left-menu-item hidden-xs hidden-sm">APIs</span></a>
+                        <a><i class="fw fw-api icon"></i><span class="left-menu-item">APIs</span></a>
                         <ul class="sublevel-menu">
-                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name hidden-xs hidden-sm">Sub menu</span></a></li>
-                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name hidden-xs hidden-sm">Sub menu</span></a></li>
+                            <li><a href="#"><i class="fw fw-api icon"></i><span class="name">Prototyped APIs</span></a></li>
                         </ul>
                     </li>
-                    <li class="green"><a><i class="fw fw-web-app icon"></i><span class="left-menu-item hidden-xs hidden-sm">Applications</span></a></li>
-                    <li class="yellow"><a><i class="fw fw-subscribe icon"></i><span class="left-menu-item hidden-xs hidden-sm">Subscriptions</span></a></li>
-                    <li class="orange"><a><i class="fw fw-forum icon"></i><span class="left-menu-item hidden-xs hidden-sm">Forum</span></a></li>
+                    <li class="green"><a><i class="fw fw-web-app icon"></i><span class="left-menu-item">Applications</span></a></li>
+                    <li class="yellow"><a><i class="fw fw-subscribe icon"></i><span class="left-menu-item">Subscriptions</span></a></li>
+                    <li class="orange"><a><i class="fw fw-forum icon"></i><span class="left-menu-item">Forum</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -99,9 +90,14 @@
             <!-- navbar -->
             <div class="navbar-wrapper navbar-search">
                 <nav class="navbar navbar-default" data-spy="affix" data-offset-top="80" data-offset-bottom="40">
+                    <a class="navbar-menu-toggle hidden-sm hidden-lg hidden-md" data-toggle="sidebar" data-target="#left-sidebar" data-container=".page-content-wrapper" data-container-divide="true" aria-expanded="false" rel="leftmenu-sidebar">
+                        <span class="icon fw-stack">
+                            <i class="fw fw-menu fw-stack-1x toggle-icon-left-arrow"></i>
+                        </span>
+                    </a>
                     <!-- Search-->
                     <div class="form-group">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                        <div class="col-xs-10 col-sm-12 col-md-12 col-lg-4">
                             <div class="input-group input-wrap search-wrap">
                                 <input type="text" class="form-control" placeholder="Search...">
                                 <div class="input-group-btn">
@@ -137,7 +133,7 @@
                                     <div class="api-details-container">
                                         <div class="add-padding-4x">
                                             <h4>Dev Service Weekly Update</h4>
-                                            <p class="text-muted no-margin"><strong>Version:</strong> 1.0.0</p>
+                                            <p class="no-margin"><strong>Version:</strong> 1.0.0</p>
                                             <p class="no-margin"><strong>By:</strong> wso2appuser-AT-wso2.com</p>
                                             <p class="no-margin"><strong>Updated:</strong> 15/Sep/2015 13:34:14 PM UTC</p>
                                             <p class="text-info margin-top-10"><strong class="padding-right-10">Status:</strong><i class="fw fw-publish fw-2x"></i> PUBLISHED</p>

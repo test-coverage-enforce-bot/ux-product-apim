@@ -15,8 +15,8 @@ $(window).load(function(){
             color = $(this).find('.left-menu-item').css('background-color'),
             prev = $(".navigation ul li:first"),
             distance = el.offset().top  - $(".navigation").offset().top,
-            isLastElClicked = el.next().length > 0 ? false : true,
-            hasSubMenu = el.find('.sublevel-menu').length == 1 ? true : false,
+            isLastElClicked = el.next().length <= 0,
+            hasSubMenu = el.find('.sublevel-menu').length == 1,
             isActiveItem = el.hasClass('active');
 
         if($('.sublevel-menu').is(':visible')){
@@ -54,6 +54,7 @@ $(window).load(function(){
                     }
                 })
             ).done(function () {
+                el.is(':hidden') ? el.show():'';
                 el.insertBefore(prev).css('top','0px').addClass('active');
                 el.find('.left-menu-item').removeAttr('style');
                 if(isLastElClicked){
@@ -79,5 +80,9 @@ $(window).load(function(){
     }).children('.sublevel-menu').find('li').click(function(e){
         e.stopImmediatePropagation();
     });
+
+    if(!$('.navigation ul li.active').is(':first-child')){
+        !$('.navigation ul li.active').trigger('click');
+    }
     
 });

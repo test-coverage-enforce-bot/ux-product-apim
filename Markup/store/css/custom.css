@@ -73,6 +73,10 @@ nav.navigation ul li {
     position: relative;
 }
 
+nav.navigation ul li.active{
+    display: none;
+}
+
 nav.navigation a:after{
     content: " ";
     display: block;

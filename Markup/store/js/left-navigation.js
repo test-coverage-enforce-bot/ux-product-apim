@@ -37,7 +37,7 @@ $(window).load(function(){
                 });
             }
             return;
-        }
+        };
 
         if (el.prev().length > 0) {
             animating = true;
@@ -54,15 +54,15 @@ $(window).load(function(){
                     }
                 })
             ).done(function () {
-                el.is(':hidden') ? el.show():'';
+                $(".navigation ul li.active").removeClass('active');
                 el.insertBefore(prev).css('top','0px').addClass('active');
                 el.find('.left-menu-item').removeAttr('style');
-                if(isLastElClicked){
+                /*if(isLastElClicked){
                     prev.removeClass('active');
 
                 }else{
                     prev.removeClass('active');
-                }
+                }*/
                 animating = false;
 
                 if(hasSubMenu){
@@ -70,6 +70,8 @@ $(window).load(function(){
                         el.find('.left-menu-item i').removeClass('fw-down').addClass('fw-up');
                     });
                 }
+
+                el.is(':hidden') ? el.show():'';
 
                 setTimeout(function(){
                     //location.replace(el.attr('href'));

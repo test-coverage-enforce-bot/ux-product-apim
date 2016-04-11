@@ -47,7 +47,7 @@ ol.breadcrumb.navbar-brand {
     margin-right:5px;
 }
 
-nav.navigation > ul{
+nav.side-nav > ul{
     background: #525252;
     color: #fff;
     position: relative;
@@ -64,7 +64,7 @@ nav.navigation > ul{
     margin: 0px;
 }
 
-nav.navigation ul li {
+nav.side-nav ul li {
     min-height: 40px;
     color: #fff;
     text-decoration: none;
@@ -73,18 +73,36 @@ nav.navigation ul li {
     position: relative;
 }
 
-nav.navigation ul li.active{
+nav.side-nav ul li.active{
     display: none;
 }
 
-nav.navigation a:after{
+nav.side-nav ul li a{
+    text-align: left;
+    vertical-align: middle;
+    line-height: 38px;
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    display: table;
+}
+
+nav.side-nav ul li a i:nth-child(2){
+    float: none;
+    position: relative;
+    left: 0px;
+    font-size: 10px;
+    display: table-cell;
+}
+
+nav.side-nav a:after{
     content: " ";
     display: block;
     height: 0;
     clear: both;
 }
 
-nav.navigation ul li a i {
+nav.side-nav ul li a i {
     line-height: 100%;
     font-size: 21px;
     vertical-align: middle;
@@ -93,26 +111,7 @@ nav.navigation ul li a i {
     float: left;
     text-align: center;
     padding: 9px;
-}
-
-nav.navigation .left-menu-item {
-    text-align: left;
-    vertical-align: middle;
-    padding-left: 10px;
-    line-height: 38px;
-    width: 160px;
-    height: 40px;
-    font-size: 14px;
-    display: table;
-    margin-left: 40px;
-}
-
-nav.navigation .left-menu-item i{
-    float: none;
-    position: relative;
-    left: 0px;
-    font-size: 10px;
-    display: table-cell;
+    margin-right: 10px;
 }
 
 ul.sublevel-menu {
@@ -135,10 +134,10 @@ ul.sublevel-menu li a{
 ul.sublevel-menu li a:hover{
     background-color: #626262;
 }
-nav.navigation ul > li .sublevel-menu li .icon{
+nav.side-nav ul > li .sublevel-menu li .icon{
     background-color: rgb(108, 108, 108);
 }
-nav.navigation ul > li ul.sublevel-menu li a:hover .icon{
+nav.side-nav ul > li ul.sublevel-menu li a:hover .icon{
     background-color: #626262;
 }
 ul.sublevel-menu .icon {
@@ -155,141 +154,141 @@ nav .sublevel-menu {
     display: none;
 }
 
-nav.navigation.sublevel-menu{
+nav.side-nav.sublevel-menu{
     display: none;
 }
 
-nav.navigation ul > li.home .icon {
+nav.side-nav ul > li.home .icon {
     background: #c0392b;
     color: white;
 }
 
-nav.navigation ul > li.home.active {
+nav.side-nav ul > li.home.active {
     background: #c0392b;
     color: white;
 }
 
-nav.navigation ul > li.home.active > .left-menu-item {
+nav.side-nav ul > li.home.active > .left-menu-item {
     background: #c0392b;
 }
 
-nav.navigation ul > li.green .icon {
+nav.side-nav ul > li.green .icon {
     background: #27ae60;
     color: white;
 }
 
-nav.navigation ul > li.green:hover > .icon {
+nav.side-nav ul > li.green:hover > .icon {
     background: #27ae60;
     color: white;
 }
 
-nav.navigation ul > li.green:hover .left-menu-item, nav.navigation ul > li.green.active .left-menu-item, nav.navigation ul > li.green.hover .left-menu-item {
+nav.side-nav ul > li.green:hover .left-menu-item, nav.side-nav ul > li.green.active .left-menu-item, nav.side-nav ul > li.green.hover .left-menu-item {
     background: #27ae60;
     color: white;
 
 }
 
-nav.navigation ul > li.red .icon {
+nav.side-nav ul > li.red .icon {
     background: #c0392b;
     color: white;
 }
 
-nav.navigation ul > li.red:hover > .icon {
+nav.side-nav ul > li.red:hover > .icon {
     background: #c0392b;
     color: white;
 }
 
-nav.navigation ul > li.red:hover .left-menu-item, nav.navigation ul > li.red.active  .left-menu-item, nav.navigation ul > li.red.hover .left-menu-item {
+nav.side-nav ul > li.red:hover .left-menu-item, nav.side-nav ul > li.red.active  .left-menu-item, nav.side-nav ul > li.red.hover .left-menu-item {
     background: #c0392b;
     color: white;
 
 }
 
-nav.navigation ul > li.orange .icon {
+nav.side-nav ul > li.orange .icon {
     background: #d35400;
     color: white;
 }
 
-nav.navigation ul > li.orange:hover > .icon {
+nav.side-nav ul > li.orange:hover > .icon {
     background: #d35400;
     color: white;
 }
 
-nav.navigation ul > li.orange:hover  .left-menu-item, nav.navigation ul > li.orange.active  .left-menu-item, nav.navigation ul > li.orange.hover  .left-menu-item {
+nav.side-nav ul > li.orange:hover  .left-menu-item, nav.side-nav ul > li.orange.active  .left-menu-item, nav.side-nav ul > li.orange.hover  .left-menu-item {
     background: #d35400;
     color: white;
 
 }
 
-nav.navigation ul > li.yellow .icon {
+nav.side-nav ul > li.yellow .icon {
     background: #f39c12;
     color: white;
 }
 
-nav.navigation ul > li.yellow:hover > .icon {
+nav.side-nav ul > li.yellow:hover > .icon {
     background: #f39c12;
     color: white;
 }
 
-nav.navigation ul > li.yellow:hover .left-menu-item, nav.navigation ul > li.yellow.active  .left-menu-item, nav.navigation ul > li.yellow.hover  .left-menu-item {
+nav.side-nav ul > li.yellow:hover .left-menu-item, nav.side-nav ul > li.yellow.active  .left-menu-item, nav.side-nav ul > li.yellow.hover  .left-menu-item {
     background: #f39c12;
     color: white;
 
 }
 
-nav.navigation ul > li.blue .icon {
+nav.side-nav ul > li.blue .icon {
     background: #2980b9;
     color: white;
 }
 
-nav.navigation ul > li.blue:hover > .icon {
+nav.side-nav ul > li.blue:hover > .icon {
     background: #2980b9;
     color: white;
 }
 
-nav.navigation ul > li.blue:hover  .left-menu-item, nav.navigation ul > li.blue.active .left-menu-item, nav.navigation ul > li.blue.hover  .left-menu-item {
+nav.side-nav ul > li.blue:hover  .left-menu-item, nav.side-nav ul > li.blue.active .left-menu-item, nav.side-nav ul > li.blue.hover  .left-menu-item {
     background: #2980b9;
     color: white;
 
 }
 
-nav.navigation ul > li.purple .icon {
+nav.side-nav ul > li.purple .icon {
     background: #8e44ad;
     color: white;
 }
 
-nav.navigation ul > li.purple:hover > .icon {
+nav.side-nav ul > li.purple:hover > .icon {
     background: #8e44ad;
     color: white;
 }
 
-nav.navigation ul > li.purple:hover  .left-menu-item, nav.navigation ul > li.purple.active  .left-menu-item, nav.navigation ul > li.purple.hover  .left-menu-item {
+nav.side-nav ul > li.purple:hover  .left-menu-item, nav.side-nav ul > li.purple.active  .left-menu-item, nav.side-nav ul > li.purple.hover  .left-menu-item {
     background: #8e44ad;
     color: white;
 
 }
 
-nav.navigation ul > li.grey .icon {
+nav.side-nav ul > li.grey .icon {
     background: #2c3e50;
     color: white;
 }
 
-nav.navigation ul > li.grey:hover > .icon {
+nav.side-nav ul > li.grey:hover > .icon {
     background: #2c3e50;
     color: white;
 }
 
-nav.navigation ul > li.grey:hover  .left-menu-item, nav.navigation ul > li.grey.active .left-menu-item, nav.navigation ul > li.grey.hover .left-menu-item {
+nav.side-nav ul > li.grey:hover  .left-menu-item, nav.side-nav ul > li.grey.active .left-menu-item, nav.side-nav ul > li.grey.hover .left-menu-item {
     background: #2c3e50;
     color: white;
 
 }
 
-nav.navigation .second_level {
+nav.side-nav .second_level {
     display: none;
 }
 
-nav.navigation .second_level a {
+nav.side-nav .second_level a {
     line-height: 20px;
     padding: 8px 0 8px 10px;
     box-sizing: border-box;
@@ -297,11 +296,11 @@ nav.navigation .second_level a {
     -moz-box-sizing: border-box;
 }
 
-nav.navigation .second_level a:hover {
+nav.side-nav .second_level a:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-nav.navigation .second_level > .back {
+nav.side-nav .second_level > .back {
     height: 100%;
     padding: 0 3px;
     background: #FFF;
@@ -310,7 +309,7 @@ nav.navigation .second_level > .back {
     width: 5px;
 }
 
-nav.navigation .second_level > .left-menu-item {
+nav.side-nav .second_level > .left-menu-item {
     padding: 6px 0;
     text-align: left;
     width: 100%;

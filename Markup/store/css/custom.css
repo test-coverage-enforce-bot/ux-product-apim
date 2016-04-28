@@ -132,7 +132,7 @@ ul.sublevel-menu li a{
     text-indent:10px;
 }
 ul.sublevel-menu li a:hover{
-    background-color: #626262;
+    background-color: #626262 !important;
 }
 nav.side-nav ul > li .sublevel-menu li .icon{
     background-color: rgb(108, 108, 108);
@@ -177,12 +177,12 @@ nav.side-nav ul > li.green .icon {
     color: white;
 }
 
-nav.side-nav ul > li.green:hover > .icon {
+nav.side-nav ul > li.green:hover > a {
     background: #27ae60;
     color: white;
 }
 
-nav.side-nav ul > li.green:hover .left-menu-item, nav.side-nav ul > li.green.active .left-menu-item, nav.side-nav ul > li.green.hover .left-menu-item {
+nav.side-nav ul > li.green:hover .left-menu-item, nav.side-nav ul > li.green.active a, nav.side-nav ul > li.green.hover .left-menu-item {
     background: #27ae60;
     color: white;
 
@@ -193,12 +193,12 @@ nav.side-nav ul > li.red .icon {
     color: white;
 }
 
-nav.side-nav ul > li.red:hover > .icon {
+nav.side-nav ul > li.red:hover > a  {
     background: #c0392b;
     color: white;
 }
 
-nav.side-nav ul > li.red:hover .left-menu-item, nav.side-nav ul > li.red.active  .left-menu-item, nav.side-nav ul > li.red.hover .left-menu-item {
+nav.side-nav ul > li.red:hover .left-menu-item, nav.side-nav ul > li.red.active  a, nav.side-nav ul > li.red.hover .left-menu-item {
     background: #c0392b;
     color: white;
 
@@ -209,12 +209,12 @@ nav.side-nav ul > li.orange .icon {
     color: white;
 }
 
-nav.side-nav ul > li.orange:hover > .icon {
+nav.side-nav ul > li.orange:hover > a  {
     background: #d35400;
     color: white;
 }
 
-nav.side-nav ul > li.orange:hover  .left-menu-item, nav.side-nav ul > li.orange.active  .left-menu-item, nav.side-nav ul > li.orange.hover  .left-menu-item {
+nav.side-nav ul > li.orange:hover  .left-menu-item, nav.side-nav ul > li.orange.active  a, nav.side-nav ul > li.orange.hover  .left-menu-item {
     background: #d35400;
     color: white;
 
@@ -225,12 +225,12 @@ nav.side-nav ul > li.yellow .icon {
     color: white;
 }
 
-nav.side-nav ul > li.yellow:hover > .icon {
+nav.side-nav ul > li.yellow:hover > a  {
     background: #f39c12;
     color: white;
 }
 
-nav.side-nav ul > li.yellow:hover .left-menu-item, nav.side-nav ul > li.yellow.active  .left-menu-item, nav.side-nav ul > li.yellow.hover  .left-menu-item {
+nav.side-nav ul > li.yellow:hover .left-menu-item, nav.side-nav ul > li.yellow.active  a, nav.side-nav ul > li.yellow.hover  .left-menu-item {
     background: #f39c12;
     color: white;
 
@@ -241,12 +241,12 @@ nav.side-nav ul > li.blue .icon {
     color: white;
 }
 
-nav.side-nav ul > li.blue:hover > .icon {
+nav.side-nav ul > li.blue:hover > a  {
     background: #2980b9;
     color: white;
 }
 
-nav.side-nav ul > li.blue:hover  .left-menu-item, nav.side-nav ul > li.blue.active .left-menu-item, nav.side-nav ul > li.blue.hover  .left-menu-item {
+nav.side-nav ul > li.blue:hover  .left-menu-item, nav.side-nav ul > li.blue.active a, nav.side-nav ul > li.blue.hover  .left-menu-item {
     background: #2980b9;
     color: white;
 
@@ -257,12 +257,12 @@ nav.side-nav ul > li.purple .icon {
     color: white;
 }
 
-nav.side-nav ul > li.purple:hover > .icon {
+nav.side-nav ul > li.purple:hover > a  {
     background: #8e44ad;
     color: white;
 }
 
-nav.side-nav ul > li.purple:hover  .left-menu-item, nav.side-nav ul > li.purple.active  .left-menu-item, nav.side-nav ul > li.purple.hover  .left-menu-item {
+nav.side-nav ul > li.purple:hover  .left-menu-item, nav.side-nav ul > li.purple.active a, nav.side-nav ul > li.purple.hover  .left-menu-item {
     background: #8e44ad;
     color: white;
 
@@ -273,15 +273,18 @@ nav.side-nav ul > li.grey .icon {
     color: white;
 }
 
-nav.side-nav ul > li.grey:hover > .icon {
+nav.side-nav ul > li.grey:hover > a  {
     background: #2c3e50;
     color: white;
 }
 
-nav.side-nav ul > li.grey:hover  .left-menu-item, nav.side-nav ul > li.grey.active .left-menu-item, nav.side-nav ul > li.grey.hover .left-menu-item {
+nav.side-nav ul > li.grey:hover  .left-menu-item, nav.side-nav ul > li.grey.active a, nav.side-nav ul > li.grey.hover .left-menu-item {
     background: #2c3e50;
     color: white;
 
+}
+ul.sublevel-menu li a{
+    background-color: rgb(108, 108, 108) !important;
 }
 
 nav.side-nav .second_level {

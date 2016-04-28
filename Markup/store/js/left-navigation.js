@@ -57,7 +57,7 @@ $(window).load(function(){
             ).done(function () {
                 activeMenuItem.removeClass('active');
                 el.insertBefore(prev).css('top','0px').addClass('active');
-                el.find('.left-menu-item').removeAttr('style');
+                //el.find('.left-menu-item').removeAttr('style');
                 animating = false;
 
                 if(hasSubMenu){

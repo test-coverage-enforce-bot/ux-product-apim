@@ -13,8 +13,18 @@
     <!-- WSO2 Theme -->
     <link href="css/theme-wso2.min.css" rel="stylesheet">
 
+	<link href="libs/bootstrap-material-design/css/bootstrap-material-design.css" rel="stylesheet">
+	<link href="libs/bootstrap-material-design/css/ripples.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/test.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap_buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/progress-wizard.min.css">
+
+    <!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+
+    <script src="js/modernizr.custom.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -59,58 +69,195 @@
 
     <!-- left-sidebar -->
     <!-- /left-sidebar -->
+    <div class="mp-pusher" id="mp-pusher">
 
-    <div class="container-fluid">
+        <!-- mp-menu -->
+        <nav id="mp-menu" class="mp-menu">
+            <div class="mp-level">
+                <h2 class="icon icon_lvl1"><i class="fw fw-home"></i> Home</h2>
+                <ul>
+                    <li class="icon">
+                        <a class="icon" href="#"><i class="fw fw-api"></i> {{APIs}}</a>
+                        <div class="mp-level">
+                            <h2 class="icon icon_lvl2"><i class="fw fw-api"></i> {{API Name}}</h2>
+                            <ul>
+                                <li><a class="icon" href="#"><i class="fw fw-view"></i> Overview</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-lifecycle"></i> Lifecycle</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-endpoint"></i> Endpoints</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-resource"></i> Resources</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-document"></i> Documents</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-checklist"></i> Access Control</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-message"></i> Mediation</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-code"></i> Scripting</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-subscribe"></i> Subscriptions</a></li>
+                                <li><a class="icon" href="#"><i class="fw fw-display"></i> API Console</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a class="icon" href="#"><i class="fw fw-statistics"></i> Statistics</a></li>
+                    <li><a class="icon" href="#"><i class="fw fw-subscribe"></i> Subscriptions</a></li>
+                    <li class="icon">
+                        <a class="icon" href="#"><i class="fw fw-action"></i> Test</a>
+                        <div class="mp-level">
+                            <h2 class="icon icon_lvl2"><i class="fw fw-api"></i> API</h2>
+                            <div class="wizard-menu">
+                                <ul class="overall-progress">
+                                    <li><span>Design</span></li>
+                                    <li><span>Implement</span></li>
+                                    <li><span>Manage</span></li>
+                                </ul>
+                                <ul class="progress-indicator stepped stacked">
+                                    <li class="completed">
+                                        <span class="bubble"></span>
+                                    </li>
+                                    <li>
+                                        <span class="bubble small"></span>
+                                    </li>
+                                    <li>
+                                        <span class="bubble small"></span>
+                                    </li>
+                                    <li class="danger">
+                                        <span class="bubble"></span>
+                                    </li>
+                                    <li>
+                                        <span class="bubble small"></span>
+                                    </li>
+                                    <li>
+                                        <span class="bubble small"></span>
+                                    </li>
+                                    <li class="danger" style="height: 350px;">
+                                        <span class="bubble"></span>
+                                    </li>
+                                    <li class="danger">
+                                        <span class="bubble"></span>
+                                    </li>
+                                </ul>
+                                <ul class="wizard-steps">
+                                    <!--<li><span>Design</span></li>-->
+                                    <li><a class="icon" href="#"><i class="fw fw-grid"></i> Generel</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-rest-api"></i> API Definition</a></li>
+                                    <!--<li><span>Implement</span></li>-->
+                                    <li><a class="icon" href="#"><i class="fw fw-cogwheel"></i> Managed API</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-cogwheels"></i> Prototyped API</a></li>
+                                    <!--<li><span>Manage</span></li>-->
+                                    <li><a class="icon" href="#"><i class="fw fw-build"></i> Configurations</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-checklist"></i> Throttling Settings</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-public"></i> Gateway Environments</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-enterprise"></i> Business Informations</a></li>
+                                    <li><a class="icon" href="#"><i class="fw fw-package"></i> Resources</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <!-- /mp-menu -->
+
+        <div class="scroller"><!-- this is for emulating position fixed of the nav -->
+            <div class="scroller-inner">
+                <!-- Top Navigation -->
+                <!--<a href="#" id="trigger" class="menu-trigger"></a>-->
+                <div id="nav-icon1" class="menu-trigger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="container-fluid">
         <div class="body-wrapper">
             <h1 class="page-header text-center">Let's get started...</h1>
             <p class="text-center">It only takes few minutes to design, publish and manage APIs in WSO2 API Manager</p>
-            <div class="">
-                    <ul class="ch-grid">
-                        <li>
-                            <div class="test_button ch-item ch-img-1">
-                                <div class="ch-info-wrap">
-                                    <div class="ch-info">
-                                        <div class="ch-info-front ch-img-1"></div>
-                                        <div class="ch-info-back">
-                                            <h3>Title</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</p>
+            <div class="ch-grid-container">
+                <ul class="ch-grid">
+                    <li>
+                        <div class="test_button ch-item ripple-effect">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1">
+                                        <i class="fw fw-document fw-4x"></i>
+                                        <span>I Have an Existing API</span>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <p class="unselectable">Use an existing API's endpoint or the API Swagger definition to create an API</p>
+                                    </div>
+                                </div>
+                                <div id="swagger-form-container" class="col-lg-9 form-container hide">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="inputEmail">Text</label>
+                                            <input type="text" class="form-control" id="inputEmail" placeholder="Text">
                                         </div>
+                                        <div class="checkbox">
+                                            <label><input type="checkbox"> Selection</label>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="test_button ch-item ripple-effect">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-2">
+                                        <i class="fw fw-endpoint fw-4x"></i>
+                                        <span>I Have a SOAP Endpoint</span>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <p class="unselectable">Use an existing SOAP endpoint to create a managed API. Import the WSDL of the SOAP service</p>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="test_button ch-item ch-img-2">
-                                <div class="ch-info-wrap">
-                                    <div class="ch-info">
-                                        <div class="ch-info-front ch-img-2"></div>
-                                        <div class="ch-info-back">
-                                            <h3>Title</h3>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor et dolore magna aliqua.</p>
-                                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="test_button ch-item ripple-effect">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-3">
+                                        <i class="fw fw-rest-api fw-4x"></i>
+                                        <span>Design New REST API</span>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <p class="unselectable">Design and prototype a new REST API</p>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                        <li>
-                            <div class="test_button ch-item ch-img-3">
-                                <div class="ch-info-wrap">
-                                    <div class="ch-info">
-                                        <div class="ch-info-front ch-img-3"></div>
-                                        <div class="ch-info-back">
-                                            <h3>Title</h3>
-                                            <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                                        </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="test_button ch-item ripple-effect">
+                            <div class="ch-info-wrap">
+                                <div class="ch-info">
+                                    <div class="ch-info-front ch-img-4">
+                                        <i class="fw fw-web-clip fw-4x"></i>
+                                        <span>Design New Websocket API</span>
+                                    </div>
+                                    <div class="ch-info-back">
+                                        <p class="unselectable">Design and prototype a new Websocket API</p>
                                     </div>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-
-                </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-actions text-right">
+                <button id="btn-close-step1" type="button" class="btn btn-circle btn-raised ripple-effect btn-default btn-xs">
+                    <i class="fw fw-cancel fw-lg"></i>
+                </button>
+                <button id="btn-next-step" type="button" class="btn btn-circle btn-raised ripple-effect btn-success btn-lg">
+                    <i class="fw fw-right-arrow fw-lg"></i>
+                </button>
+            </div>
         </div>
     </div>
+            </div><!-- /scroller-inner -->
+        </div><!-- /scroller -->
 
+    </div><!-- /pusher -->
 </div>
 <!-- /page-content-wrapper -->
 
@@ -131,49 +278,110 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/theme-wso2.min.js"></script>
 
-<script src="js/cta.min.js"></script>
+<script src="js/jquery.transit.min.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/mlpushmenu.js"></script>
+
 <script>
-    var e1 = document.querySelector(".test_button"),
-        e2 = document.querySelector(".test_form");
+    new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'nav-icon1' ) );
+</script>
 
-    var reverseAnimate;
-    var isFormVisible = false;
+<script>
+    var button,parentLi,chGrid,swaggerFormContainer,posa,parentPosa, containerWidth, moveThismuch;
 
-    $(".test_button").on("click",function(){
-//        if(!isFormVisible){
-//            reverseAnimate = cta(e1, e2,function(){
-//                $(".test_form").removeClass("hide");
-//                isFormVisible = true;
-//            });
-//        }
+    $(".test_button").on("click",morphButton);
 
-        if(!$(this).hasClass("active")){
-            $(this).addClass("active");
-            $(this).removeClass("animate-back");
-            $(this).addClass("animate");
-            //$(this).children(".test_form").removeClass("hide");
-        }
-        //var c = $(this).class(".test_button").not();
-        //console.log(c);
-
-    });
-
-
-    $(".test_cancel").on("click",function(){
-        reverseAnimate(function(){
-            $(".test_form").addClass("hide");
-            isFormVisible = false;
+    $("#btn-close-step1").on("click",function(){
+        //debugger;
+        var closeBtn = $(this);
+        parentLi.removeClass("active");
+        swaggerFormContainer.addClass("hide");
+        $("#btn-close-step1").transition({opacity:'0',zIndex:'0'},function () {
+            $("#btn-close-step1").hide();
         });
-
-
-
+        $("#btn-next-step").transition({opacity:'0',zIndex:'0'},function(){
+            $("#btn-next-step").hide();
+        });
+        button
+            .transition({width: '200',borderRadius:'50% 50% 50% 50%', zIndex: '0',x: '0'},200,'cubic-bezier(0.4, 0.0, 0.2, 1);');
+        //button.on("click",morphButton);
+        console.log(moveThismuch);
     });
 
+
+    function morphButton(){
+        button = $(this);
+        parentLi = $(this).parent();
+        chGrid = $(".ch-grid");
+        swaggerFormContainer = $("#swagger-form-container");
+        posa = button.offset();
+        parentPosa = chGrid.offset();
+        containerWidth = chGrid.width();
+        moveThismuch  = posa.left - parentPosa.left;
+
+        if(!parentLi.hasClass("active")){
+            parentLi.addClass("active");
+            button
+                .transition({borderRadius:'0 0 0 0', zIndex: '1',delay: 300},'cubic-bezier(0.4, 0.0, 0.6, 1)')
+                .transition({x: -(moveThismuch - 20)}, 'cubic-bezier(0.4, 0.0, 0.2, 1);')
+                .transition({width: containerWidth},'cubic-bezier(0.4, 0.0, 0.2, 1);', function(){
+                    swaggerFormContainer.removeClass("hide");
+                    $("#btn-close-step1,#btn-next-step").show();
+                    $("#btn-close-step1").transition({opacity:'1',x: 90,y: -parentPosa.top - 60, zIndex:'2', delay: 100},'cubic-bezier(0.4, 0.0, 0.6, 1)');
+                    $("#btn-next-step").transition({opacity:'1',x: -30,y: - (parentPosa.top - 40), zIndex:'2', delay: 300},'cubic-bezier(0.4, 0.0, 0.6, 1)');
+                    //button.off("click",morphButton);
+                    //button.removeClass("ripple-effect");
+                    //debugger;
+                    //$('.ink', button).remove();
+                    //button.unbind('mouseenter').unbind('mouseleave');
+                });
+
+
+        }
+
+        console.log(moveThismuch);
+    }
 
     $(".animate").bind('oanimationend animationend webkitAnimationEnd', function() {
         console.log("fin");
     });
 
+
+
+
+
+    (function($) {
+        $(".ripple-effect").click(function(e){
+            var rippler = $(this);
+
+            // create .ink element if it doesn't exist
+            if(rippler.find(".ink").length == 0) {
+                rippler.append("<span class='ink'></span>");
+            }
+
+            var ink = rippler.find(".ink");
+
+            // prevent quick double clicks
+            ink.removeClass("animate");
+
+            // set .ink diametr
+            if(!ink.height() && !ink.width())
+            {
+                var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+                ink.css({height: d, width: d});
+            }
+
+            // get click coordinates
+            var x = e.pageX - rippler.offset().left - ink.width()/2;
+            var y = e.pageY - rippler.offset().top - ink.height()/2;
+
+            // set .ink position and add class .animate
+            ink.css({
+                top: y+'px',
+                left:x+'px'
+            }).addClass("animate");
+        })
+    })(jQuery);
 </script>
 
 </body>

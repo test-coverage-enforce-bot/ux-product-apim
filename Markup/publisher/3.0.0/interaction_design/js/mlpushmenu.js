@@ -106,6 +106,7 @@
 
 			// the menu should close if clicking somewhere on the body
 			var bodyClickFn = function( el ) {
+				console.log(el);
 				self._resetMenu();
 				el.removeEventListener( self.eventtype, bodyClickFn );
 			};
@@ -141,6 +142,8 @@
 							classie.add( closest( el, 'mp-level' ), 'mp-level-overlay' );
 							self._openMenu( subLevel );
 						}
+                        $(".icon_lvl"+ level + " i").transition({x: '238',color:'#333333'},'cubic-bezier(0.4, 0.0, 0.2, 1);');
+						console.log(level);
 					} );
 				}
 			} );
@@ -155,6 +158,7 @@
 						self.level = level;
 						self._closeMenu();
 					}
+                    $(".icon_lvl"+ level + " i").transition({x: '0',color:'#cdcdcd'},'cubic-bezier(0.4, 0.0, 0.2, 1);');
 				} );
 			} );
 
@@ -172,6 +176,9 @@
 			} );	
 		},
 		_openMenu : function( subLevel ) {
+			//debugger;
+			$(this.trigger).addClass("open");
+
 			// increment level depth
 			++this.level;
 
@@ -208,6 +215,8 @@
 			classie.remove( this.wrapper, 'mp-pushed' );
 			this._toggleLevels();
 			this.open = false;
+            $(this.trigger).removeClass("open");
+            $(".mp-level h2[class*='icon_lvl'] i").transition({x: '0',color:'#cdcdcd'},'cubic-bezier(0.4, 0.0, 0.2, 1);');
 		},
 		// close sub menus
 		_closeMenu : function() {

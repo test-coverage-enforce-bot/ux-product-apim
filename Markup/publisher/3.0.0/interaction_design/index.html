@@ -20,8 +20,6 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap_buttons.css" />
     <link rel="stylesheet" type="text/css" href="css/progress-wizard.min.css">
 
-    <!--<link rel="stylesheet" type="text/css" href="css/demo.css" />-->
-    <link rel="stylesheet" type="text/css" href="css/icons.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
 
     <script src="js/modernizr.custom.js"></script>
@@ -41,7 +39,7 @@
     <div class="container-fluid">
         <div class="pull-left brand">
             <a href="#">
-                <img src="images/logo-inverse.svg" alt="wso2" title="wso2" class="logo">
+                <img src="images/logo.svg" alt="wso2" title="wso2" class="logo">
                 <span>APIM Publisher</span>
             </a>
         </div>
@@ -96,59 +94,6 @@
                     </li>
                     <li><a class="icon" href="#"><i class="fw fw-statistics"></i> Statistics</a></li>
                     <li><a class="icon" href="#"><i class="fw fw-subscribe"></i> Subscriptions</a></li>
-                    <li class="icon">
-                        <a class="icon" href="#"><i class="fw fw-action"></i> Test</a>
-                        <div class="mp-level">
-                            <h2 class="icon icon_lvl2"><i class="fw fw-api"></i> API</h2>
-                            <div class="wizard-menu">
-                                <ul class="overall-progress">
-                                    <li><span>Design</span></li>
-                                    <li><span>Implement</span></li>
-                                    <li><span>Manage</span></li>
-                                </ul>
-                                <ul class="progress-indicator stepped stacked">
-                                    <li class="completed">
-                                        <span class="bubble"></span>
-                                    </li>
-                                    <li>
-                                        <span class="bubble small"></span>
-                                    </li>
-                                    <li>
-                                        <span class="bubble small"></span>
-                                    </li>
-                                    <li class="danger">
-                                        <span class="bubble"></span>
-                                    </li>
-                                    <li>
-                                        <span class="bubble small"></span>
-                                    </li>
-                                    <li>
-                                        <span class="bubble small"></span>
-                                    </li>
-                                    <li class="danger" style="height: 350px;">
-                                        <span class="bubble"></span>
-                                    </li>
-                                    <li class="danger">
-                                        <span class="bubble"></span>
-                                    </li>
-                                </ul>
-                                <ul class="wizard-steps">
-                                    <!--<li><span>Design</span></li>-->
-                                    <li><a class="icon" href="#"><i class="fw fw-grid"></i> Generel</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-rest-api"></i> API Definition</a></li>
-                                    <!--<li><span>Implement</span></li>-->
-                                    <li><a class="icon" href="#"><i class="fw fw-cogwheel"></i> Managed API</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-cogwheels"></i> Prototyped API</a></li>
-                                    <!--<li><span>Manage</span></li>-->
-                                    <li><a class="icon" href="#"><i class="fw fw-build"></i> Configurations</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-checklist"></i> Throttling Settings</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-public"></i> Gateway Environments</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-enterprise"></i> Business Informations</a></li>
-                                    <li><a class="icon" href="#"><i class="fw fw-package"></i> Resources</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
 
                 </ul>
             </div>
@@ -167,6 +112,7 @@
 
                 <div class="container-fluid">
         <div class="body-wrapper">
+
             <h1 class="page-header text-center">Let's get started...</h1>
             <p class="text-center">It only takes few minutes to design, publish and manage APIs in WSO2 API Manager</p>
             <div class="ch-grid-container">
@@ -278,11 +224,16 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/theme-wso2.min.js"></script>
 
+<script src="libs/bootstrap-material-design/js/material.js"></script>
+<script src="libs/bootstrap-material-design/js/ripples.js"></script>
+
+
 <script src="js/jquery.transit.min.js"></script>
 <script src="js/classie.js"></script>
 <script src="js/mlpushmenu.js"></script>
 
 <script>
+    $.material.init();
     new mlPushMenu( document.getElementById( 'mp-menu' ), document.getElementById( 'nav-icon1' ) );
 </script>
 
@@ -327,8 +278,8 @@
                 .transition({width: containerWidth},'cubic-bezier(0.4, 0.0, 0.2, 1);', function(){
                     swaggerFormContainer.removeClass("hide");
                     $("#btn-close-step1,#btn-next-step").show();
-                    $("#btn-close-step1").transition({opacity:'1',x: 90,y: -parentPosa.top - 60, zIndex:'2', delay: 100},'cubic-bezier(0.4, 0.0, 0.6, 1)');
-                    $("#btn-next-step").transition({opacity:'1',x: -30,y: - (parentPosa.top - 40), zIndex:'2', delay: 300},'cubic-bezier(0.4, 0.0, 0.6, 1)');
+                    $("#btn-close-step1").transition({opacity:'1',x: 100,y: -parentPosa.top - 30, zIndex:'2', delay: 100},'cubic-bezier(0.4, 0.0, 0.6, 1)');
+                    $("#btn-next-step").transition({opacity:'1',x: -30,y: - (parentPosa.top - 70), zIndex:'2', delay: 300},'cubic-bezier(0.4, 0.0, 0.6, 1)');
                     //button.off("click",morphButton);
                     //button.removeClass("ripple-effect");
                     //debugger;

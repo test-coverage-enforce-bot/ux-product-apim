@@ -1020,5 +1020,26 @@
 }
 
 header.header-default{
-
+	box-shadow: 1px 0 4px rgba(0,0,0,0.2);
+	background: #fff;
+	z-index: 1000;
+}
+header a, header a:focus, header a:hover, header a:visited{
+	color: #333;
+}
+header .nav .dropdown-menu, header .nav .open>a, header .nav .open>a:focus, header .nav .open>a:hover,header .nav>li>a:hover{
+	background: #eee;
+}
+header .nav>li>a:hover,header .nav .dropdown-menu a{
+	color: #333;
+}
+header .fa-inverse, header .fa-inverse::before, header .fw-inverse, header .fw-inverse::before{
+	color: #fff;
+}
+footer{
+	background: #ccc;
+	color: #333;
+}
+footer a, footer a:hover,footer .icon{
+	color: #333;
 }

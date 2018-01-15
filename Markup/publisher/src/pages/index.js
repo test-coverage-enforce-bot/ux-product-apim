@@ -15,6 +15,7 @@ import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import PageLoadingAnimation from '../app/components/Base/Loading/loading';
+import Reboot from 'material-ui/Reboot';
 
 // A theme with custom primary and secondary color.
 // It's optional.
@@ -50,6 +51,7 @@ class Index extends React.Component {
       if(loading) { // if your component doesn't have to wait for an async action, remove this block
           return (
               <MuiThemeProvider theme={theme}>
+                  <Reboot/>
                   <PageLoadingAnimation/>
               </MuiThemeProvider>
           )
@@ -57,6 +59,7 @@ class Index extends React.Component {
 
     return (
         <MuiThemeProvider theme={theme}>
+            <Reboot/>
           <AppBar position="static">
           <Toolbar>
 

@@ -8,14 +8,12 @@ import Dialog, {
   DialogActions,
 } from 'material-ui/Dialog';
 import Typography from 'material-ui/Typography';
-import { MuiThemeProvider} from 'material-ui/styles';
 import Theme from '../themes/light';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import PageLoadingAnimation from '../app/components/Base/Loading/loading';
-import Reboot from 'material-ui/Reboot';
 
 // A theme with custom primary and secondary color.
 // It's optional.
@@ -50,16 +48,12 @@ class Index extends React.Component {
 
       if(loading) { // if your component doesn't have to wait for an async action, remove this block
           return (
-              <MuiThemeProvider theme={theme}>
-                  <Reboot/>
                   <PageLoadingAnimation/>
-              </MuiThemeProvider>
           )
       }
 
     return (
-        <MuiThemeProvider theme={theme}>
-            <Reboot/>
+        <div className="root-me">
           <AppBar position="static">
           <Toolbar>
 
@@ -69,7 +63,7 @@ class Index extends React.Component {
             <Button color="contrast">Login</Button>
           </Toolbar>
            </AppBar>
-          <div className="root-me">
+
             <Grid container spacing={0}>
               <Grid item xs={12}>
                 <Dialog open={open} onClose={this.handleClose}>
@@ -97,7 +91,6 @@ class Index extends React.Component {
               </Grid>
             </Grid>
           </div>
-        </MuiThemeProvider>
     );
   }
 }

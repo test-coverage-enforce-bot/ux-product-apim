@@ -16,14 +16,14 @@
  * under the License.
  */
 
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-class Listing extends React.Component {
+class Listing extends Component {
     render() {
         return(
            <div>
-
+                sadasdsa
            </div>
         );
     };

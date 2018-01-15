@@ -16,7 +16,7 @@
  * under the License.
  */
 
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import {getAsyncComponent} from 'async-react-component';
@@ -25,7 +25,7 @@ import {getAsyncComponent} from 'async-react-component';
 const APIOnBoarding = () => import('./components/Apis/OnBoarding/listing');
 const Indexpage = () => import('../pages/index');
 
-class Publisher extends  React.Component  {
+class Publisher extends  Component  {
 
     render(){
         return(

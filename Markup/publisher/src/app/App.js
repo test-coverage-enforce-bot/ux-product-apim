@@ -17,16 +17,26 @@
  */
 
 import React from 'react';
-import PropTypes from 'prop-types';
+import ReactDOM from 'react-dom';
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
+import {getAsyncComponent} from 'async-react-component';
 
-class Listing extends React.Component {
-    render() {
+
+const APIOnBoarding = () => import('./components/Apis/OnBoarding/listing');
+const Indexpage = () => import('../pages/index');
+
+class Publisher extends  React.Component  {
+
+    render(){
         return(
-           <div>
-
-           </div>
+            <Router>
+                <Switch>
+                    <Route path={"/apis/"} component={getAsyncComponent(APIOnBoarding)}/>
+                    <Route path={"/"} component={getAsyncComponent(Indexpage)}/>
+                </Switch>
+            </Router>
         );
     };
 }
 
-export default Listing;
+export default Publisher;

@@ -16,19 +16,15 @@
  * under the License.
  */
 
-import ReactDOM from 'react-dom'
 import React from 'react'
-import Publisher from "./app/App"
-import {MuiThemeProvider} from 'material-ui/styles';
-import Reboot from 'material-ui/Reboot';
-import Theme from './themes/light';
+import { LinearProgress } from "material-ui/Progress";
 
-const theme =  Theme;
+const PageLoadingAnimation = (props) => {
+    return (
+        <div>
+            <LinearProgress />
+        </div>
+    );
+};
 
-ReactDOM.render(
-    <MuiThemeProvider theme={theme}>
-        <Reboot/>
-        <Publisher/>
-    </MuiThemeProvider>
-    , document.getElementById("react-root")
-);
+export default PageLoadingAnimation

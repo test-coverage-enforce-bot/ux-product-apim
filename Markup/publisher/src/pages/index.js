@@ -14,28 +14,16 @@ import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-import { withStyles } from 'material-ui/styles';
+import PageLoadingAnimation from '../app/components/Base/Loading/loading';
 
 // A theme with custom primary and secondary color.
 // It's optional.
 const theme = Theme;
 
-const styles = {
-    root: {
-        width: '100%',
-    },
-    flex: {
-        flex: 1,
-    },
-    menuButton: {
-        marginLeft: -12,
-        marginRight: 20,
-    },
-};
-
 class Index extends React.Component {
   state = {
     open: false,
+      loading: true
   };
 
   handleClose = () => {
@@ -50,16 +38,29 @@ class Index extends React.Component {
     });
   };
 
+    componentDidMount() {
+        setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
+    }
+
   render() {
-    const { classes } = this.props;
-    const { open } = this.state;
+        const { classes } = this.props;
+        const { open } = this.state;
+        const { loading } = this.state;
+
+      if(loading) { // if your component doesn't have to wait for an async action, remove this block
+          return (
+              <MuiThemeProvider theme={theme}>
+                  <PageLoadingAnimation/>
+              </MuiThemeProvider>
+          )
+      }
 
     return (
         <MuiThemeProvider theme={theme}>
           <AppBar position="static">
           <Toolbar>
 
-            <Typography type="title" color="inherit" className={classes.flex}>
+            <Typography type="title" color="inherit" >
               Title
             </Typography>
             <Button color="contrast">Login</Button>
@@ -102,4 +103,4 @@ Index.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default withStyles(styles)(Index);
+export default Index;

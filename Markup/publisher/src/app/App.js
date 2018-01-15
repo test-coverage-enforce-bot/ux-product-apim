@@ -29,7 +29,7 @@ class Publisher extends  React.Component  {
 
     render(){
         return(
-            <Router>
+            <Router basename="/publisher">
                 <Switch>
                     <Route path={"/apis/"} component={getAsyncComponent(APIOnBoarding)}/>
                     <Route path={"/"} component={getAsyncComponent(Indexpage)}/>

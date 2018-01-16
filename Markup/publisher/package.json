@@ -11,7 +11,8 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "react-scripts": "latest",
-    "typeface-roboto": "latest"
+    "typeface-roboto": "latest",
+    "material-ui-icons": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

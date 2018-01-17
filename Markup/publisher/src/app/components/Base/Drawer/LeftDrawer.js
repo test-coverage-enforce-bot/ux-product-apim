@@ -24,6 +24,7 @@ import Home from 'material-ui-icons/Home';
 import Timeline from 'material-ui-icons/Timeline';
 import Settings from 'material-ui-icons/Settings';
 import Language from 'material-ui-icons/Language';
+import Link from 'material-ui-icons/Link';
 import './leftDrawer.css';
 
 class LeftDrawer extends Component {
@@ -50,6 +51,12 @@ class LeftDrawer extends Component {
                                 <Language />
                             </ListItemIcon>
                             <ListItemText primary="APIs" />
+                        </ListItem>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <Link />
+                            </ListItemIcon>
+                            <ListItemText primary="Endpoints" />
                         </ListItem>
                         <ListItem button>
                             <ListItemIcon>

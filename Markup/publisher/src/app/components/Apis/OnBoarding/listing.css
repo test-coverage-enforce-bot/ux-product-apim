@@ -1,0 +1,30 @@
+.app-title{
+    font-size: 20px;
+    font-weight: 300;
+}
+.container-row{
+    height: 37.5vh;
+}
+.first-row{
+    height: 25vh;
+}
+.text-gutter{
+    margin-bottom: 48px;
+}
+.text-welcome{
+    font-weight: 300;
+}
+.card-onboard{
+    margin-top: 22px;
+}
+.card-title{
+    font-weight: 300;
+    padding-bottom: 12px;
+}
+.card-content{
+    padding-top: 24px;
+}
+
+#react-root{
+    background-color: #eee;
+}

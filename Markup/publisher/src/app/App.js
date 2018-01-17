@@ -17,13 +17,13 @@
  */
 
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import {getAsyncComponent} from 'async-react-component';
 
 
 const APIOnBoarding = () => import('./components/Apis/OnBoarding/listing');
 const Indexpage = () => import('../pages/index');
+const Login = () => import('./components/Login/login')
 
 class Publisher extends  Component  {
 
@@ -31,7 +31,8 @@ class Publisher extends  Component  {
         return(
             <Router basename="/publisher">
                 <Switch>
-                    <Route path={"/apis/"} component={getAsyncComponent(APIOnBoarding)}/>
+                    <Route path={"/login"} component={getAsyncComponent(Login)}/>
+                    <Route path={"/apis"} component={getAsyncComponent(APIOnBoarding)}/>
                     <Route path={"/"} component={getAsyncComponent(Indexpage)}/>
                 </Switch>
             </Router>

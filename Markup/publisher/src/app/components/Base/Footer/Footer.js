@@ -25,7 +25,7 @@ class Footer extends Component {
     render(){
         return(
             <div className='footer'>
-                <Typography type="body1" className='text-gutter text-welcome'>
+                <Typography type="body1" className='footer-text'>
                     WSO2 APIM Publisher v3.0.0 | © 2017
                 </Typography>
             </div>

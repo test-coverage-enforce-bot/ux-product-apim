@@ -1,4 +1,12 @@
 .footer{
-    position: absolute;
+    position: fixed;
     bottom: 0px;
+    height: 30px;
+    text-align: center;
+    width: 100%;
+    background-color: #eee;
+}
+
+.footer-text{
+    line-height: 30px;
 }

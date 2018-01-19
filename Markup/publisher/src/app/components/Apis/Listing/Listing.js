@@ -418,7 +418,8 @@ class Listing extends Component {
                         </Grid>
                     </Grid>
                     <div className='fab-bottom'>
-                        <Button fab color="primary" aria-label="add" className='app-toolbar-fab-icon'>
+                        <Button fab color="primary" aria-label="add" className='app-toolbar-fab-icon'
+                                component={Link} to="/create">
                             <AddIcon />
                         </Button>
                     </div>

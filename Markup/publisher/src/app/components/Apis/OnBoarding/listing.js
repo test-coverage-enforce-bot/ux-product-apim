@@ -24,6 +24,7 @@ import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Grid from 'material-ui/Grid';
 import Button from 'material-ui/Button';
 import './listing.css';
+import { Link } from 'react-router-dom';
 
 class Listing extends Component {
 
@@ -68,7 +69,7 @@ class Listing extends Component {
                                                 </Typography>
                                             </CardContent>
                                             <CardActions>
-                                                <Button dense color="primary">
+                                                <Button dense color="primary" component={Link} to="/create">
                                                     Create
                                                 </Button>
                                             </CardActions>

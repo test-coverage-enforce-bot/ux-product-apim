@@ -40,23 +40,19 @@ class LeftDrawer extends Component {
                      className="left-drawer" type="persistent">
                 <div>
                     <List className='list-menu'>
-                        <Link to="/apis/" className='unlink'>
-                            <ListItem button className='list-menu-home'>
-                                <ListItemIcon>
-                                    <HomeIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="Home" />
-                            </ListItem>
-                        </Link>
+                        <ListItem button className='list-menu-home' component={Link} to="/apis/">
+                            <ListItemIcon>
+                                <HomeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="Home" />
+                        </ListItem>
                         <Divider/>
-                        <Link to="/apis/listing" className='unlink'>
-                            <ListItem button>
-                                <ListItemIcon>
-                                    <LanguageIcon />
-                                </ListItemIcon>
-                                <ListItemText primary="APIs" />
-                            </ListItem>
-                        </Link>
+                        <ListItem button component={Link} to="/apis/listing">
+                            <ListItemIcon>
+                                <LanguageIcon />
+                            </ListItemIcon>
+                            <ListItemText primary="APIs" />
+                        </ListItem>
                         <ListItem button>
                             <ListItemIcon>
                                 <LinkIcon />

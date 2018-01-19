@@ -28,14 +28,13 @@ import Toolbar from 'material-ui/Toolbar';
 import IconButton from 'material-ui/IconButton';
 import Typography from 'material-ui/Typography';
 import Button from 'material-ui/Button';
-import Badge from 'material-ui/Badge';
 import Dialog, {
     DialogActions,
     DialogContent,
     DialogContentText,
     DialogTitle,
 } from 'material-ui/Dialog';
-
+import SearchBox from '../../Base/SearchBox/SearchBox'
 import GridOnIcon from 'material-ui-icons/GridOn';
 import ListIcon from 'material-ui-icons/List';
 import AddIcon from 'material-ui-icons/Add';
@@ -43,6 +42,7 @@ import EditIcon from 'material-ui-icons/Edit';
 import DeleteIcon from 'material-ui-icons/Delete';
 import UserIcon from 'material-ui-icons/Group';
 import './listing.css';
+import PageLoadingAnimation from '../../Base/Loading/loading';
 
 
 class Listing extends Component {
@@ -50,7 +50,8 @@ class Listing extends Component {
         super(props);
         this.state = {
             leftDrawer: false,
-            open: false
+            open: false,
+            loading: true
         }
     }
 
@@ -66,7 +67,19 @@ class Listing extends Component {
         this.setState({ open: false });
     };
 
+    componentDidMount() {
+        setTimeout(() => this.setState({ loading: false }), 1500); // simulates an async action, and hides the spinner
+    }
+
     render(){
+        const { loading } = this.state;
+
+        if(loading) { // if your component doesn't have to wait for an async action, remove this block
+            return (
+                <PageLoadingAnimation/>
+            )
+        }
+
         return(
             <div className='main-wrapper'>
                 <Header onSelectHamberger={this.handleHamberger}/>
@@ -80,6 +93,7 @@ class Listing extends Component {
                             <Typography type="title" color="inherit" className='app-toolbar-title' align='left'>
                                 All APIs
                             </Typography>
+                            <SearchBox/>
                             <div className='listing-actions'>
                                 <IconButton className='list' aria-label="List">
                                     <ListIcon />
@@ -182,8 +196,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -216,8 +229,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -250,8 +262,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -284,8 +295,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -318,8 +328,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -352,42 +361,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
-                                                </Typography>
-                                            </CardContent>
-                                        </Link>
-                                        <CardActions>
-                                            <IconButton aria-label="Users">
-                                                <UserIcon />
-                                            </IconButton>
-                                            <IconButton aria-label="Delete" onClick={this.handleClickOpen}>
-                                                <DeleteIcon />
-                                            </IconButton>
-                                            <IconButton aria-label="Edit">
-                                                <EditIcon />
-                                            </IconButton>
-                                        </CardActions>
-                                    </Card>
-                                </Grid>
-                                <Grid item xs={3}>
-                                    <Card className=''>
-                                        <Link to="/about" className='unlink'>
-                                            <CardMedia
-                                                className='api-image'
-                                                image="../../../images/pizza.jpeg"
-                                                title="Contemplative Reptile"
-                                            />
-                                            <CardContent className='card-content-min'>
-                                                <Typography type="headline" component="h2">
-                                                    Domino's
-                                                </Typography>
-                                                <Typography type="caption" gutterBottom align="left">
-                                                    1.0.0 - administrator
-                                                </Typography>
-                                                <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -420,8 +394,7 @@ class Listing extends Component {
                                                     1.0.0 - administrator
                                                 </Typography>
                                                 <Typography component="p">
-                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-                                                    across all continents except Antarctica
+                                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species
                                                 </Typography>
                                             </CardContent>
                                         </Link>
@@ -438,6 +411,7 @@ class Listing extends Component {
                                         </CardActions>
                                     </Card>
                                 </Grid>
+
                             </Grid>
                         </Grid>
                         <Grid item xs={2}  >

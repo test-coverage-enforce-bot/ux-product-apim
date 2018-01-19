@@ -6,4 +6,35 @@
 }
 .text-welcome{
      font-weight: 300;
+    margin-bottom: 1em;
  }
+.api-options-icon{
+    width: 60px;
+    height: 60px;
+    color:#fff;
+    margin: 0 auto 30px auto;
+}
+.api-options-title{
+    color: #fff;
+    font-weight: 300;
+    width: 200px;
+    text-align: center;
+}
+.api-options-block{
+    width: 300px;
+    height:300px;
+    border-radius:150px;
+    background: #AB47BC;
+    display: flex;
+    flex-direction:column;
+}
+.api-options-hover{
+    position: absolute;
+    background: #AB47BC;
+    opacity: 0;
+    transition: opacity .35s ease-in-out;
+    min-height:200px;
+}
+.api-options-block:hover .api-options-hover{
+    opacity: 1;
+}

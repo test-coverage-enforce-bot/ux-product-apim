@@ -23,7 +23,8 @@ import {getAsyncComponent} from 'async-react-component';
 
 const APIOnBoarding = () => import('./components/Apis/OnBoarding/listing');
 const Indexpage = () => import('../pages/index');
-const Login = () => import('./components/Login/login')
+const Login = () => import('./components/Login/login');
+const APIListing = () => import('./components/Apis/Listing/Listing');
 
 class Publisher extends  Component  {
 
@@ -32,6 +33,7 @@ class Publisher extends  Component  {
             <Router basename="/publisher">
                 <Switch>
                     <Route path={"/login"} component={getAsyncComponent(Login)}/>
+                    <Route path={"/apis/listing"} component={getAsyncComponent(APIListing)}/>
                     <Route path={"/apis"} component={getAsyncComponent(APIOnBoarding)}/>
                     <Route path={"/"} component={getAsyncComponent(Indexpage)}/>
                 </Switch>

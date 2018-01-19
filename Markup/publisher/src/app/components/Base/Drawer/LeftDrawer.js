@@ -16,15 +16,16 @@
  * under the License.
  */
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
 import Divider from 'material-ui/Divider';
-import Home from 'material-ui-icons/Home';
-import Timeline from 'material-ui-icons/Timeline';
-import Settings from 'material-ui-icons/Settings';
-import Language from 'material-ui-icons/Language';
-import Link from 'material-ui-icons/Link';
+import HomeIcon from 'material-ui-icons/Home';
+import TimelineIcon from 'material-ui-icons/Timeline';
+import SettingsIcon from 'material-ui-icons/Settings';
+import LanguageIcon from 'material-ui-icons/Language';
+import LinkIcon from 'material-ui-icons/Link';
 import './leftDrawer.css';
 
 class LeftDrawer extends Component {
@@ -39,34 +40,38 @@ class LeftDrawer extends Component {
                      className="left-drawer" type="persistent">
                 <div>
                     <List className='list-menu'>
-                        <ListItem button className='list-menu-home'>
-                            <ListItemIcon>
-                                <Home />
-                            </ListItemIcon>
-                            <ListItemText primary="Home" />
-                        </ListItem>
+                        <Link to="/apis/" className='unlink'>
+                            <ListItem button className='list-menu-home'>
+                                <ListItemIcon>
+                                    <HomeIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="Home" />
+                            </ListItem>
+                        </Link>
                         <Divider/>
+                        <Link to="/apis/listing" className='unlink'>
+                            <ListItem button>
+                                <ListItemIcon>
+                                    <LanguageIcon />
+                                </ListItemIcon>
+                                <ListItemText primary="APIs" />
+                            </ListItem>
+                        </Link>
                         <ListItem button>
                             <ListItemIcon>
-                                <Language />
-                            </ListItemIcon>
-                            <ListItemText primary="APIs" />
-                        </ListItem>
-                        <ListItem button>
-                            <ListItemIcon>
-                                <Link />
+                                <LinkIcon />
                             </ListItemIcon>
                             <ListItemText primary="Endpoints" />
                         </ListItem>
                         <ListItem button>
                             <ListItemIcon>
-                                <Timeline />
+                                <TimelineIcon />
                             </ListItemIcon>
                             <ListItemText primary="Analytics" />
                         </ListItem>
                         <ListItem button>
                             <ListItemIcon>
-                                <Settings />
+                                <SettingsIcon />
                             </ListItemIcon>
                             <ListItemText primary="Subscriptions" />
                         </ListItem>

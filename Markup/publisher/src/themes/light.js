@@ -25,8 +25,12 @@ import red from 'material-ui/colors/red';
 const theme = createMuiTheme({
     palette: {
         type: 'light',
-        primary: { light: green[300], main: blue[800], dark: green[700] },
+        primary: { light: blue[300], main: blue[800], dark: green[700] },
         error: red,
+        background: {default:'#eee' }
+    },
+    typography: {
+        fontWeight: 300
     },
     overrides: {
         MuiDrawer: {

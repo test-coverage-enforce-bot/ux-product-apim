@@ -19,6 +19,7 @@
 import React, {Component} from 'react';
 import Header from '../../Base/Header/Header';
 import LeftDrawer from '../../Base/Drawer/LeftDrawer';
+import Footer from '../../Base/Footer/Footer';
 import Grid from 'material-ui/Grid';
 import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
@@ -299,6 +300,7 @@ class ApiCreate extends Component {
                       </Grid>
                   </Grid>
               </Grid>
+              <Footer/>
           </div>
         );
     }

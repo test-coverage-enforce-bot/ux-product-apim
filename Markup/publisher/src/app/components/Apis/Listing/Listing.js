@@ -116,7 +116,7 @@ class Listing extends Component {
                             <Grid container spacing={24}>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -149,7 +149,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -182,7 +182,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -215,7 +215,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -248,7 +248,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -281,7 +281,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -314,7 +314,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -347,7 +347,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"
@@ -380,7 +380,7 @@ class Listing extends Component {
                                 </Grid>
                                 <Grid item xs={3}>
                                     <Card className=''>
-                                        <Link to="/about" className='unlink'>
+                                        <Link to="/details" className='unlink'>
                                             <CardMedia
                                                 className='api-image'
                                                 image="../../../images/pizza.jpeg"

@@ -17,16 +17,14 @@
  */
 
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../../Base/Header/Header';
 import LeftDrawer from '../../Base/Drawer/LeftDrawer';
 import Footer from '../../Base/Footer/Footer';
 import Grid from 'material-ui/Grid';
-import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
-import Button from 'material-ui/Button';
 import ButtonBase from 'material-ui/ButtonBase';
 import SvgIcon from 'material-ui/SvgIcon';
-import LanguageIcon from 'material-ui-icons/Language';
 import './apicreate.css';
 
 
@@ -35,12 +33,13 @@ class ApiCreate extends Component {
         super(props);
         this.state = {
             leftDrawer: false,
-            open: false
+            open: false,
         }
-    }
+    };
+
     handleHamberger = (leftValue) => {
         this.setState({leftDrawer: leftValue});
-    }
+    };
 
     render(){
         return(
@@ -58,7 +57,7 @@ class ApiCreate extends Component {
                               </Typography>
                               <Grid container className='api-options'>
                                   <Grid item xs={3}>
-                                      <ButtonBase focusRipple className='api-options-block'>
+                                      <ButtonBase focusRipple className='api-options-block' component={Link} to='/create/swagger/'>
                                           <div  className='api-options'>
                                               <div className='api-options-icon'>
                                                   <SvgIcon className='api-options-icon' viewBox="0 0 14 14">

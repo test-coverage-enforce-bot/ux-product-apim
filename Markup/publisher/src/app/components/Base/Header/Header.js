@@ -37,7 +37,7 @@ class Header extends Component {
 
     handleLangChange = () => {
         let lang = this.state.left?false:true;
-        this.state.left = this.state.left?false:true;
+        this.setState( this.state.left?false:true);
         this.props.onSelectHamberger(lang);
     }
 

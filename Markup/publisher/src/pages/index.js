@@ -26,16 +26,12 @@ import Dialog, {
   DialogActions,
 } from 'material-ui/Dialog';
 import Typography from 'material-ui/Typography';
-import Theme from '../themes/light';
 import Grid from 'material-ui/Grid';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import PageLoadingAnimation from '../app/components/Base/Loading/loading';
 
-// A theme with custom primary and secondary color.
-// It's optional.
-const theme = Theme;
 
 class Index extends React.Component {
   state = {
@@ -60,7 +56,6 @@ class Index extends React.Component {
     }
 
   render() {
-        const { classes } = this.props;
         const { open } = this.state;
         const { loading } = this.state;
 

@@ -16,31 +16,21 @@
  * under the License.
  */
 
-import { createMuiTheme } from 'material-ui/styles';
-import purple from 'material-ui/colors/purple';
-import blue from 'material-ui/colors/blue';
-import green from 'material-ui/colors/green';
-import red from 'material-ui/colors/red';
+import React, {Component} from 'react';
+import Typography from 'material-ui/Typography';
+import './footer.css';
 
-const theme = createMuiTheme({
-    palette: {
-        type: 'light',
-        primary: { light: blue[300], main: blue[800], dark: green[700] },
-        error: red,
-        background: {default:'#eee' }
-    },
-    typography: {
-        fontWeight: 300
-    },
-    overrides: {
-        MuiDrawer: {
-            paperAnchorLeft: {
-                top: 65,
-            },
-        }
+
+class Footer extends Component {
+    render(){
+        return(
+            <div className='footer'>
+                <Typography type="body1" className='footer-text'>
+                    WSO2 APIM Publisher v3.0.0 | © 2017
+                </Typography>
+            </div>
+        );
     }
+}
 
-
-});
-
-export default theme;
+export default Footer;

@@ -16,22 +16,31 @@
  * under the License.
  */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React, { Component } from 'react';
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import {getAsyncComponent} from 'async-react-component';
 
 
 const APIOnBoarding = () => import('./components/Apis/OnBoarding/listing');
 const Indexpage = () => import('../pages/index');
+const Login = () => import('./components/Login/login');
+const APIListing = () => import('./components/Apis/Listing/Listing');
+const APICreate = () => import('./components/Apis/Create/ApiCreate');
+const APIDetails = () => import('./components/Apis/Details/Details');
+const APICreateSwagger = () => import('./components/Apis/Create/Swagger/ApiCreateSwagger');
 
-class Publisher extends  React.Component  {
+class Publisher extends  Component  {
 
     render(){
         return(
-            <Router>
+            <Router basename="/publisher">
                 <Switch>
-                    <Route path={"/apis/"} component={getAsyncComponent(APIOnBoarding)}/>
+                    <Route path={"/login"} component={getAsyncComponent(Login)}/>
+                    <Route path={"/create/swagger"} component={getAsyncComponent(APICreateSwagger)}/>
+                    <Route path={"/create"} component={getAsyncComponent(APICreate)}/>
+                    <Route path={"/details"} component={getAsyncComponent(APIDetails)}/>
+                    <Route path={"/apis/listing"} component={getAsyncComponent(APIListing)}/>
+                    <Route path={"/apis"} component={getAsyncComponent(APIOnBoarding)}/>
                     <Route path={"/"} component={getAsyncComponent(Indexpage)}/>
                 </Switch>
             </Router>

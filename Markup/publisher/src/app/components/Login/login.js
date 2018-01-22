@@ -15,32 +15,26 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+import React, {Component} from 'react';
+import Paper from 'material-ui/Paper';
+import Grid from 'material-ui/Grid';
 
-import { createMuiTheme } from 'material-ui/styles';
-import purple from 'material-ui/colors/purple';
-import blue from 'material-ui/colors/blue';
-import green from 'material-ui/colors/green';
-import red from 'material-ui/colors/red';
-
-const theme = createMuiTheme({
-    palette: {
-        type: 'light',
-        primary: { light: blue[300], main: blue[800], dark: green[700] },
-        error: red,
-        background: {default:'#eee' }
-    },
-    typography: {
-        fontWeight: 300
-    },
-    overrides: {
-        MuiDrawer: {
-            paperAnchorLeft: {
-                top: 65,
-            },
-        }
+class Login extends Component {
+    render(){
+        return(
+          <div>
+              <Grid container spacing={0}>
+                  <Grid item xs={12} >
+                      <Grid container justify='center'>
+                          <Grid item xs={3} >
+                                <Paper className>xs=12</Paper>
+                          </Grid>
+                      </Grid>
+                  </Grid>
+              </Grid>
+          </div>
+        );
     }
+};
 
-
-});
-
-export default theme;
+export default Login;

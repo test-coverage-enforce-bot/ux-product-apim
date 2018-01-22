@@ -1,0 +1,39 @@
+.app-toolbar{
+    margin-top: 63px;
+    position: fixed;
+    width: 100%;
+    background-color: #eee;
+    border-bottom: 1px solid #e1e1e1;
+    height: 66px;
+    z-index: 1000;
+}
+.body-container{
+    padding: 140px 15px 50px 15px;
+    position: relative;
+
+}
+.app-toolbar-title{
+    font-weight: 300;
+    flex-grow: 1;
+    line-height: 2em;
+}
+.fab-bottom{
+    position: fixed;
+    bottom: 2.5rem;
+    right: 1.5rem;
+}
+.app-toolbar-center-grid{
+    display: flex;
+}
+.api-image{
+    height: 200px;
+}
+.unlink{
+    text-decoration: none;
+}
+.main-wrapper{
+    position: relative;
+}
+.card-content-min{
+    min-height: 152px;
+}

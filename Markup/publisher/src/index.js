@@ -22,6 +22,7 @@ import Publisher from "./app/App"
 import {MuiThemeProvider} from 'material-ui/styles';
 import Reboot from 'material-ui/Reboot';
 import Theme from './themes/light';
+import 'typeface-roboto';
 
 const theme =  Theme;
 

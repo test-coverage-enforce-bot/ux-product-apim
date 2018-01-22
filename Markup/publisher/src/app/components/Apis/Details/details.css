@@ -1,0 +1,24 @@
+.app-toolbar{
+    margin-top: 63px;
+    position: fixed;
+    width: 100%;
+    background-color: #eee;
+    border-bottom: 1px solid #e1e1e1;
+    height: 66px;
+    z-index: 1000;
+}
+.app-toolbar-center-grid{
+    display: flex;
+}
+.app-toolbar-title{
+    font-weight: 300;
+    flex-grow: 1;
+    line-height: 2em;
+}
+.left-fixed-bar>div{
+    z-index: 1000;
+    background: #d1d1d6;
+}
+.listing-actions{
+    line-height: 68px;
+}

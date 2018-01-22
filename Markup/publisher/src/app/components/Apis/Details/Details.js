@@ -17,6 +17,7 @@
  */
 
 import React, {Component} from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from '../../Base/Header/Header';
 import LeftDrawer from '../../Base/Drawer/LeftDrawer';
@@ -27,6 +28,8 @@ import Typography from 'material-ui/Typography';
 import './details.css';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
+import Card, { CardMedia, CardContent } from 'material-ui/Card';
+import Table, { TableBody, TableCell, TableRow } from 'material-ui/Table';
 import Avatar from 'material-ui/Avatar';
 import Divider from 'material-ui/Divider';
 import Button from 'material-ui/Button';
@@ -95,7 +98,7 @@ class Details extends Component {
                 </Toolbar>
                 <Drawer type="permanent" className='left-fixed-bar'>
                     <List className='list-menu'>
-                        <ListItem button className='list-menu-home' >
+                        <ListItem button className='list-menu-home' component={Link} to='/apis/listing/'>
                             <Avatar>
                                 <BackIcon />
                             </Avatar>
@@ -175,7 +178,43 @@ class Details extends Component {
                           justify="center">
                         <Grid item xs={2}>
                         </Grid>
-                        <Grid item xs={8}>
+                        <Grid item xs={8} className='main-col'>
+                            <Card className=''>
+                                <CardMedia
+                                    className='api-image'
+                                    image="../../../images/pizza.jpeg"
+                                    title="Dominos"
+                                />
+                            </Card>
+
+                            <Table className='api-details-table'>
+                                <TableBody>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Visibility</Typography></TableCell>
+                                        <TableCell >public</TableCell>
+                                    </TableRow>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Version</Typography></TableCell>
+                                        <TableCell>1.0.0</TableCell>
+                                    </TableRow>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Context</Typography></TableCell>
+                                        <TableCell >/getPizza</TableCell>
+                                    </TableRow>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Date Created</Typography></TableCell>
+                                        <TableCell>2018-01-04 3.45 PST</TableCell>
+                                    </TableRow>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Last Updated</Typography></TableCell>
+                                        <TableCell >2018-01-08 5.35 PST</TableCell>
+                                    </TableRow>
+                                    <TableRow >
+                                        <TableCell><Typography type="body2">Published environments</Typography></TableCell>
+                                        <TableCell >not-supported</TableCell>
+                                    </TableRow>
+                                </TableBody>
+                            </Table>
                         </Grid>
                         <Grid item xs={2}>
                         </Grid>

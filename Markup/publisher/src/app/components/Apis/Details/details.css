@@ -22,3 +22,13 @@
 .listing-actions{
     line-height: 68px;
 }
+.main-col{
+    margin-top: 1em;
+}
+.api-image{
+    height: 250px;
+}
+.api-details-table{
+    width: 40%;
+    margin-top: 2em;
+}

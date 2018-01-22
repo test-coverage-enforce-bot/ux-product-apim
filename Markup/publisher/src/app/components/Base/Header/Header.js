@@ -16,6 +16,7 @@
  * under the License.
  */
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Typography from 'material-ui/Typography';
@@ -58,7 +59,7 @@ class Header extends Component {
                     <IconButton className='menu-icon' color="contrast" aria-label="Menu" onClick={this.handleLangChange}>
                         <MenuIcon />
                     </IconButton>
-                    <Typography type="headline" color="inherit" className='product-title'>
+                    <Typography type="headline" color="inherit" className='product-title' component={Link} to='/'>
                         WSO2 API Publisher
                     </Typography>
                     <div>

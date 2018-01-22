@@ -30,10 +30,6 @@ import './leftDrawer.css';
 
 class LeftDrawer extends Component {
 
-    constructor(props) {
-        super(props);
-    }
-
     render(){
         return(
             <Drawer open={this.props.left}

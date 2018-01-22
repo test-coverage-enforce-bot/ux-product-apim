@@ -28,7 +28,7 @@ import Typography from 'material-ui/Typography';
 import './details.css';
 import Drawer from 'material-ui/Drawer';
 import List, { ListItem, ListItemIcon, ListItemText } from 'material-ui/List';
-import Card, { CardMedia, CardContent } from 'material-ui/Card';
+import Card, { CardMedia } from 'material-ui/Card';
 import Table, { TableBody, TableCell, TableRow } from 'material-ui/Table';
 import Avatar from 'material-ui/Avatar';
 import Divider from 'material-ui/Divider';
